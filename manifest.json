@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "React Icons Searchbar",
+  "version": "1.0.0",
+  "description": "A simple extension that adds a functional search bar to react-icons webpage with better user experience.",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://react-icons.github.io/react-icons/*"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ]
+}
