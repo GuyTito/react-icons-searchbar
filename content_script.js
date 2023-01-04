@@ -1,14 +1,16 @@
 
 const div = document.createElement("div")
 div.innerHTML = `
-  <form id="tito-form">
+  <form id="tito-form" style="margin-left: 30px;">
     <input
       style="border: 1px solid #ccc; border-radius: 10px; padding: 10px;" type="text" id="tito-search" autocomplete="off" placeholder="Search icons..."
     >
   </form>
 `
-const h1 = document.querySelector("h1")
-h1.prepend(div)
+const search = document.querySelector(".search")
+search.before(div)
+
+search.style.display = "none"
 
 const form = document.querySelector('#tito-form')
 const input = document.querySelector('#tito-search')
